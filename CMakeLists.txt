@@ -7,3 +7,4 @@ find_package(glfw3 3.3 REQUIRED)
 
 add_subdirectory(shared)
 add_subdirectory(assignments/0000-template)
+add_subdirectory(assignments/0001-opengl-legacy-mode)
