@@ -37,7 +37,7 @@ int triangle(GLFWwindow *window, bool hasColor)
         // We follow up by specifying the vertices the primitive will use
         glVertex2d(-0.5f, -0.5f);
         glVertex2d(0, 0.5);
-        glVertex2d( 0.5f, -0.5f);
+        glVertex2d(0.5f, -0.5f);
 
         // Then we finish the mode
         glEnd();
@@ -55,7 +55,6 @@ int triangle(GLFWwindow *window, bool hasColor)
     glfwTerminate();
     return EXIT_SUCCESS;
 }
-
 
 int movingTriangle(GLFWwindow *window, bool tearing)
 {
@@ -118,7 +117,6 @@ int movingTriangle(GLFWwindow *window, bool tearing)
     return EXIT_SUCCESS;
 }
 
-
 int helloTriangle(GLFWwindow *window)
 {
     while (!glfwWindowShouldClose(window))
@@ -136,8 +134,7 @@ int helloTriangle(GLFWwindow *window)
         glVertex2d(0, 0.5);
 
         glColor3d(0.0f, 1.0f, 0.0f);
-        glVertex2d( 0.5f, -0.5f);
-
+        glVertex2d(0.5f, -0.5f);
 
         // Then when we draw, OpenGL we'll handle the color blending
         // between the vertices.
@@ -156,7 +153,6 @@ int helloTriangle(GLFWwindow *window)
     glfwTerminate();
     return EXIT_SUCCESS;
 }
-
 
 int main(void)
 {
@@ -200,20 +196,19 @@ int main(void)
     {
         switch (x)
         {
-            case 0:
-                std::cout << "Bye!" << std::endl;
-                return EXIT_SUCCESS;
-            case 1:
-                return triangle(window, false);
-            case 2:
-                return triangle(window, true);
-            case 3:
-                return movingTriangle(window, false);
-            case 4:
-                return movingTriangle(window, true);
-            case 5:
-                return helloTriangle(window);
+        case 0:
+            std::cout << "Bye!" << std::endl;
+            return EXIT_SUCCESS;
+        case 1:
+            return triangle(window, false);
+        case 2:
+            return triangle(window, true);
+        case 3:
+            return movingTriangle(window, false);
+        case 4:
+            return movingTriangle(window, true);
+        case 5:
+            return helloTriangle(window);
         }
-        
     }
 }
